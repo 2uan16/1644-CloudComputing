@@ -18,9 +18,18 @@
 <header>
     <nav class="navbar navbar-inverse">
   <div class="container-fluid">
+
+    
+
     <div class="navbar-header">
-      <a class="navbar-brand" href="/">ATNToys</a>
+      {{#each account}}
+        <span>Welcome {{name}}</span>
+        My country: {{country}}
+        <a href="/logout">Logout</a>
+      {{/each}}
     </div>
+
+
     <ul class="nav navbar-nav">
       <li class="active"><a href="/viewAll">Products</a></li>
       <li><a href="/">Index Page</a></li>
@@ -39,7 +48,7 @@
     </div>
     <div class="form-group">
       <label for="price">Price:</label>
-      <input type="number" class="form-control" id="price" placeholder="Enter Price" name="txtPrice">
+      <input type="" class="form-control" id="price" placeholder="Enter Price" name="txtPrice">
     </div>
     <div class="form-group">
       <label for="amount">Quantity:</label>
@@ -54,6 +63,8 @@
       <input type="text" class="form-control" id="picture" placeholder="Enter URL" name="txtPicture">
     </div>
     <button type="submit" class="btn btn-default">Submit</button>
+        <span style="color:red"> {{add_err}}
+
   </form>
 </div>
     
